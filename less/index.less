@@ -1,3 +1,8 @@
+/* Variables */
+@background: #e9ecef;
+@center: 0 auto;
+@flex-block: flex;
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -55,5 +60,71 @@ table {
 
 html, body {
     height: 100%;
+}
+/*Setting the size of the container */
+.container {
+	max-width: 871px;
+	margin: @center;
+	
+	header {
+		background: @background;
+		display: flex;
+		flex-direction: column;
+		h1, h2, p {
+			padding: 17px  0 28px 32px;
+		}
+		h1 {
+			font-size: 2.5rem;
+		}
+		 h2 {
+			font-size: 1.3rem;
+			/* font-weight: bolder; */
+		}
+		.line {
+			border: 1px solid #000;
+		}
+		.business-img {
+			padding: 64px 0 0 32px;
+		   }
+	}
+	nav {
+		display: @flex-block;
+		justify-content: flex-end;
+		margin: 34px 11px 35px 0;
+		a {
+			padding: 0 25px;
+			text-decoration: none;
+			color: #777;
+		}
+		a:last-child {
+			padding-right: 0;
+		}
+		a:hover {
+			color: #333;
+		}
+	}
+	 
+	.intro {
+		width: 45rem;
+	}
+	.button {
+		background: #808080;
+		border-radius: 6px;
+		width: 155px;
+		font-size: 1.4rem;
+		display: flex;
+		justify-content: center;
+		color: #fff;
+		padding: 15px 17px;
+		margin: 25px 0 65px 32px;
+	}
+	.about {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.left {
+		width: 25rem;
+	}
 }
 
