@@ -1,1 +1,277 @@
-/* Compile your LESS file! */
+/* Variables */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/*Setting the size of the container */
+.container {
+  max-width: 871px;
+  margin: 0 auto;
+}
+.container header {
+  background: #e9ecef;
+  display: flex;
+  flex-direction: column;
+}
+.container header h1,
+.container header h2,
+.container header p {
+  padding: 17px  0 28px 32px;
+}
+.container header h1 {
+  font-size: 2.5rem;
+}
+.container header h2 {
+  font-size: 1.3rem;
+  /* font-weight: bolder; */
+}
+.container header .business-img {
+  padding: 64px 0 0 32px;
+}
+.container header .line {
+  border-top: 1px solid #eca;
+  margin-left: 34px;
+}
+.container header .intro {
+  width: 45rem;
+}
+.container .button {
+  background: #808080;
+  border-radius: 6px;
+  width: 155px;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  margin: 25px 0 65px 32px;
+}
+.container .button a {
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 19px;
+}
+.container nav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 34px 11px 35px 0;
+}
+.container nav a {
+  padding: 0 25px;
+  text-decoration: none;
+  color: #777;
+}
+.container nav a:last-child {
+  padding-right: 0;
+}
+.container nav a:hover {
+  color: #333;
+}
+.container .about {
+  display: flex;
+  justify-content: space-between;
+}
+.container .about .left {
+  width: 25rem;
+  text-justify: auto;
+  line-height: 1.4rem;
+}
+.container .about .right {
+  width: 25rem;
+}
+.container .about .right ul li {
+  border: 1px dashed #eaa;
+  padding: 17px 35px;
+  font-size: 1.2rem;
+}
+.container .about h2 {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  padding: 28px 0 17px 0;
+}
+.container .employment-history {
+  /* .title {
+				display: @flex-block;
+				flex-direction: row;
+				justify-content: space-between;
+				font-weight: bolder;
+			}
+			.work-skills1, .work-skills2, .work-skills3, .work-skills4  {
+				display: @flex-block;
+				flex-direction: row;
+				justify-content: space-between;
+				flex-shrink: 1;
+				padding: 15px 0;
+				width: 55rem;
+			}
+			.work-skills4 {
+				margin-bottom: 65px;
+			}
+			.work-skills1 {
+				border: 1px solid #000;
+				.companies {
+					margin-left: 65px !important;
+				}
+				
+			}
+			 */
+}
+.container .employment-history h2 {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  padding: 28px 0 17px 0;
+}
+.container .employment-history .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bolder;
+}
+.container .employment-history .wrk-history {
+  display: flex;
+  flex-direction: column;
+}
+.container .employment-history .wrk-history .work-skills1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container .employment-history .wrk-history .work-skills1 .companies {
+  justify-content: center;
+}
+.container .employment-history .wrk-history .work-skills2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
