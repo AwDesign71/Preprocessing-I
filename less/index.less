@@ -68,7 +68,7 @@ html, body {
 	
 	header {
 		background: @background;
-		display: flex;
+		display: @flex-block;
 		flex-direction: column;
 		h1, h2, p {
 			padding: 17px  0 28px 32px;
@@ -80,51 +80,135 @@ html, body {
 			font-size: 1.3rem;
 			/* font-weight: bolder; */
 		}
-		.line {
-			border: 1px solid #000;
-		}
+		
 		.business-img {
 			padding: 64px 0 0 32px;
 		   }
-	}
-	nav {
-		display: @flex-block;
-		justify-content: flex-end;
-		margin: 34px 11px 35px 0;
-		a {
-			padding: 0 25px;
-			text-decoration: none;
-			color: #777;
+		   .line {
+			   border-top: 1px solid #eca;
+			   margin-left: 34px;
+		   }
+		   .intro {
+			width: 45rem;
+		   }
 		}
-		a:last-child {
-			padding-right: 0;
+		.button {
+			background: #808080;
+			border-radius: 6px;
+			width: 155px;
+			font-size: 1.4rem;
+			display: @flex-block;
+			justify-content: center;
+			color: #fff;
+			margin: 25px 0 65px 32px;
+			a {
+				text-decoration: none;
+				color: #fff;
+				padding: 15px 19px;
+			}
 		}
-		a:hover {
-			color: #333;
+		nav {
+			display: @flex-block;
+			justify-content: flex-end;
+			margin: 34px 11px 35px 0;
+			a {
+				padding: 0 25px;
+				text-decoration: none;
+				color: #777;
+			}
+			a:last-child {
+				padding-right: 0;
+			}
+			a:hover {
+				color: #333;
+			}
 		}
-	}
+		.about {
+			display: @flex-block;
+			justify-content: space-between;
+			.left {
+				width: 25rem;
+				text-justify: auto;
+				line-height: 1.4rem;
+			}
+			.right {
+				width: 25rem;
+				
+				ul li {
+					border: 1px dashed #eaa;
+					padding: 17px 35px;
+					font-size: 1.2rem;
+				}
+			}
+			h2 {
+				font-size: 1.3rem;
+				font-weight: bolder;
+				padding: 28px 0 17px 0;
+			}
+		}
+		.employment-history {
+			
+			h2 {
+				font-size: 1.3rem;
+				font-weight: bolder;
+				padding: 28px 0 17px 0;
+			}
+			/* .title {
+				display: @flex-block;
+				flex-direction: row;
+				justify-content: space-between;
+				font-weight: bolder;
+			}
+			.work-skills1, .work-skills2, .work-skills3, .work-skills4  {
+				display: @flex-block;
+				flex-direction: row;
+				justify-content: space-between;
+				flex-shrink: 1;
+				padding: 15px 0;
+				width: 55rem;
+			}
+			.work-skills4 {
+				margin-bottom: 65px;
+			}
+			.work-skills1 {
+				border: 1px solid #000;
+				.companies {
+					margin-left: 65px !important;
+				}
+				
+			}
+			 */
+			 .title {
+				display: @flex-block;
+				flex-direction: row;
+				justify-content: space-between;
+				font-weight: bolder;
+			}
+			 .wrk-history {
+				display: @flex-block;
+				flex-direction: column;
+				
+				.work-skills1 {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					.companies {
+						justify-content: center;
+					}
+				}
+				.work-skills2 {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+				}
+			}
+		}
+		
+	} //end of the container
+	
+		
 	 
-	.intro {
-		width: 45rem;
-	}
-	.button {
-		background: #808080;
-		border-radius: 6px;
-		width: 155px;
-		font-size: 1.4rem;
-		display: flex;
-		justify-content: center;
-		color: #fff;
-		padding: 15px 17px;
-		margin: 25px 0 65px 32px;
-	}
-	.about {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-	.left {
-		width: 25rem;
-	}
-}
+	
+	
+	
 

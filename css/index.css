@@ -157,11 +157,30 @@ body {
   font-size: 1.3rem;
   /* font-weight: bolder; */
 }
-.container header .line {
-  border: 1px solid #000;
-}
 .container header .business-img {
   padding: 64px 0 0 32px;
+}
+.container header .line {
+  border-top: 1px solid #eca;
+  margin-left: 34px;
+}
+.container header .intro {
+  width: 45rem;
+}
+.container .button {
+  background: #808080;
+  border-radius: 6px;
+  width: 155px;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  margin: 25px 0 65px 32px;
+}
+.container .button a {
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 19px;
 }
 .container nav {
   display: flex;
@@ -179,25 +198,80 @@ body {
 .container nav a:hover {
   color: #333;
 }
-.container .intro {
-  width: 45rem;
-}
-.container .button {
-  background: #808080;
-  border-radius: 6px;
-  width: 155px;
-  font-size: 1.4rem;
-  display: flex;
-  justify-content: center;
-  color: #fff;
-  padding: 15px 17px;
-  margin: 25px 0 65px 32px;
-}
 .container .about {
+  display: flex;
+  justify-content: space-between;
+}
+.container .about .left {
+  width: 25rem;
+  text-justify: auto;
+  line-height: 1.4rem;
+}
+.container .about .right {
+  width: 25rem;
+}
+.container .about .right ul li {
+  border: 1px dashed #eaa;
+  padding: 17px 35px;
+  font-size: 1.2rem;
+}
+.container .about h2 {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  padding: 28px 0 17px 0;
+}
+.container .employment-history {
+  /* .title {
+				display: @flex-block;
+				flex-direction: row;
+				justify-content: space-between;
+				font-weight: bolder;
+			}
+			.work-skills1, .work-skills2, .work-skills3, .work-skills4  {
+				display: @flex-block;
+				flex-direction: row;
+				justify-content: space-between;
+				flex-shrink: 1;
+				padding: 15px 0;
+				width: 55rem;
+			}
+			.work-skills4 {
+				margin-bottom: 65px;
+			}
+			.work-skills1 {
+				border: 1px solid #000;
+				.companies {
+					margin-left: 65px !important;
+				}
+				
+			}
+			 */
+}
+.container .employment-history h2 {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  padding: 28px 0 17px 0;
+}
+.container .employment-history .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bolder;
+}
+.container .employment-history .wrk-history {
+  display: flex;
+  flex-direction: column;
+}
+.container .employment-history .wrk-history .work-skills1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.container .left {
-  width: 25rem;
+.container .employment-history .wrk-history .work-skills1 .companies {
+  justify-content: center;
+}
+.container .employment-history .wrk-history .work-skills2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
