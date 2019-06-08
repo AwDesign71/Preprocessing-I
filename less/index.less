@@ -1,5 +1,13 @@
+// Google Font
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
 /* Variables */
 @background: #e9ecef;
+@multi-color: #808080;
+@font-color: #fff;
+@href-color: #212529;
+@width: 100%;
 @center: 0 auto;
 @flex-block: flex;
 
@@ -59,13 +67,14 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: 'Muli', sans-serif;
+	font-size: 16px;
 }
 /*Setting the size of the container */
 .container {
 	max-width: 871px;
 	margin: @center;
-	
 	header {
 		background: @background;
 		display: @flex-block;
@@ -89,21 +98,21 @@ html, body {
 			   margin-left: 34px;
 		   }
 		   .intro {
-			width: 45rem;
+			width: @width;
 		   }
 		}
 		.button {
-			background: #808080;
+			background: @multi-color;
 			border-radius: 6px;
 			width: 155px;
-			font-size: 1.4rem;
+			font-size: 1.2rem;
 			display: @flex-block;
 			justify-content: center;
-			color: #fff;
+			color: @font-color;
 			margin: 25px 0 65px 32px;
 			a {
 				text-decoration: none;
-				color: #fff;
+				color: @font-color;
 				padding: 15px 19px;
 			}
 		}
@@ -114,7 +123,7 @@ html, body {
 			a {
 				padding: 0 25px;
 				text-decoration: none;
-				color: #777;
+				color: @multi-color;
 			}
 			a:last-child {
 				padding-right: 0;
@@ -145,70 +154,133 @@ html, body {
 				font-weight: bolder;
 				padding: 28px 0 17px 0;
 			}
-		}
-		.employment-history {
 			
-			h2 {
+				
+		}
+		.contact {
+			background: @background;
+			padding: 33px 0 120px 0;
+
+			a{
+				text-decoration: none;
+				padding-left: 20px;
 				font-size: 1.3rem;
-				font-weight: bolder;
-				padding: 28px 0 17px 0;
-			}
-			/* .title {
-				display: @flex-block;
-				flex-direction: row;
-				justify-content: space-between;
-				font-weight: bolder;
-			}
-			.work-skills1, .work-skills2, .work-skills3, .work-skills4  {
-				display: @flex-block;
-				flex-direction: row;
-				justify-content: space-between;
-				flex-shrink: 1;
-				padding: 15px 0;
-				width: 55rem;
-			}
-			.work-skills4 {
-				margin-bottom: 65px;
-			}
-			.work-skills1 {
-				border: 1px solid #000;
-				.companies {
-					margin-left: 65px !important;
-				}
-				
-			}
-			 */
-			 .title {
-				display: @flex-block;
-				flex-direction: row;
-				justify-content: space-between;
-				font-weight: bolder;
-			}
-			 .wrk-history {
-				display: @flex-block;
-				flex-direction: column;
-				
-				.work-skills1 {
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
-					.companies {
-						justify-content: center;
-					}
-				}
-				.work-skills2 {
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
-				}
+				color: @href-color;
 			}
 		}
 		
 	} //end of the container
 	
+	.employment-history {
+		display: flex;
+		flex-direction: column;
 		
-	 
+		h2 {
+			font-size: 1.3rem;
+			font-weight: bolder;
+			padding: 28px 0 17px 0;
+		}
+		ul.history-row {
+			display: @flex-block;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		ul.history-row li {
+			display: @flex-block;
+			flex: 1;
+			padding: 10px;
+			border-top: 2px dashed @multi-color;
+		}
+		.history-row:nth-child(odd) {
+			background: @background;
+			
+		}
+		.history-row:nth-child(4) {
+			border-bottom: 2px @multi-color;
+		}
+		
+	}
+	/*.class mixins */
+	.flex-footer {
+		display: @flex-block;
+		justify-content: center;
+		margin-top: 155px;
+	}
+	 footer {
+		.flex-footer();
+	 }
+	/* mobile version */
 	
+ .nav-bar {
+	 	@media (max-width: 500px) {
+		width: @width;
+		display: @flex-block;
+		flex-direction: column;
+		justify-content: center;
+		flex: 1;
+		display: none;
+		a {
+			flex: 1;
+			margin: 22px 0;
+			padding: 22px 0;
+		}		
+	}
 	
+}
+header {
+	@media (max-width: 500px) {
+		width: 100%;
+		display: none;
+	}
 	
+}
+.intro {
+	@media (max-width: 500px) {
+	   .line {
+		   width: 80%;
+		}
+	   P {
+		   width: 100%;
+		   line-height: 1.1em;
+		   /* display: none; */
+	   }
+	}
+}
+.about {
+	@media (max-width: 500px) {
+		display: @flex-block;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		display: none;
+
+	}
+	.left h2, .right h2 {
+		padding-left: 18px;
+	}
+}
+.employment-history {
+	@media (max-width: 500px) {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		h2 {
+			margin-left: 18px;
+		}
+	}
+}
+.contact {
+	@media (max-width: 500px) {
+	background: @background;
+	width: @width;
+	padding: 33px 0 120px 0;
+	height: auto;
+	a {
+		text-decoration: none;
+		color: @href-color;
+		padding-left: 33px;
+       font-size: 1.6rem;
+	}
+   }
+  }
 
